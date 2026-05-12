@@ -1,0 +1,15 @@
+def countvowelconso (userInput):
+    vowels= 'a','e','i','u','A','E','I','O','U'
+    vowelcount=0
+    cosocount=0
+    #To traverse each string if it's a vowel
+    for eachchar in userInput:             
+        if(eachchar.isalpha):
+            if (eachchar in vowels):
+                vowelcount+=1
+            else:
+                cosocount+=1
+    return(vowelcount,cosocount)
+    #2 variables to store 2 returns from string
+resul1,result2=countvowelconso('Mayank PAndey')
+print(resul1,result2)
