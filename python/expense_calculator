@@ -1,0 +1,51 @@
+mainList = []
+
+print('Welcome to Expense Calculator')
+
+while True:
+    print('\n1. To add')
+    print('2. View all expenses')
+    print('3. View total spending')
+    print('4. To exit')
+
+    # Take choice
+    choice = int(input('Enter your choice: '))
+
+    # To add
+    if choice == 1:
+        date = input("Enter date (DD-MM-YYYY): ")
+        category = input("Enter category (Food, Travel, Shopping): ")
+        description = input("Enter short description: ")
+        amount = float(input("Enter amount (₹): "))
+
+        expenses = {
+            'date': date,
+            'category': category,
+            'description': description,
+            'Amount': amount,
+        }
+
+        mainList.append(expenses)
+        print('\nDetails added successfully')
+
+    # View all expenses
+    elif choice == 2:
+        print('\nAll Expenses:')
+        print(mainList)
+
+    # View total spending
+    elif choice == 3:
+        total = 0
+
+        for expense in mainList:
+            total += expense['Amount']
+
+        print('Total spending is:', total)
+
+    # Exit
+    elif choice == 4:
+        print('Thanks')
+        break
+
+    else:
+        print('Invalid choice')
