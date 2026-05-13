@@ -2,6 +2,7 @@ mainList = []
 
 print('Welcome to Expense Calculator')
 
+# while true means until user doesn't close the code or type 4 for bye
 while True:
     print('\n1. To add')
     print('2. View all expenses')
